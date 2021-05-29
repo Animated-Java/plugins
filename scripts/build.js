@@ -21,6 +21,9 @@ fs.writeFileSync(
                 meta.description
               ) {
                 fs.copyFileSync(loc, "./out/" + filepath);
+                meta.api = {
+                  location: filepath,
+                };
                 return meta;
               } else {
                 throw new Error(`PLUGIN ${filepath} HAS INVALID META`);
