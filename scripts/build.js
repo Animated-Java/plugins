@@ -23,6 +23,7 @@ fs.writeFileSync(
                 fs.copyFileSync(loc, "./out/" + filepath);
                 meta.api = {
                   location: filepath,
+                  id: path.parse(filepath).name,
                 };
                 return meta;
               } else {
